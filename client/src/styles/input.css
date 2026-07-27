@@ -1,0 +1,52 @@
+.input-area {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 18px 24px;
+    border-top: 1px solid #333;
+    background: #212121;
+    flex-shrink: 0;
+}
+
+.input-area textarea {
+    flex: 1;
+    resize: none;
+    overflow-y: auto;
+    max-height: 180px;
+
+    padding: 14px 18px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 16px;
+
+    background: #2f2f2f;
+    color: white;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    font-family: inherit;
+}
+
+.input-area button {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #10A37F;
+    color: white;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: .2s;
+}
+
+.input-area button:hover {
+    background: #0d8d6d;
+}

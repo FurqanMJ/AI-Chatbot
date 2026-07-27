@@ -1,0 +1,131 @@
+.message {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px 28px;
+    animation: fadeIn .25s ease;
+}
+
+/* Assistant */
+
+.message.assistant {
+    justify-content: flex-start;
+}
+
+/* User */
+
+.message.user {
+    justify-content: flex-end;
+}
+
+/* Avatar */
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #343541;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+/* User avatar moves right */
+
+.message.user .avatar {
+    order: 2;
+    background: #10A37F;
+}
+
+/* Shared content */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1.7;
+    word-break: break-word;
+}
+
+/* Assistant message */
+
+.message.assistant .content {
+    max-width: 900px;
+    color: white;
+}
+
+/* User message */
+
+.message.user .content {
+    max-width: 75%;
+    background: #10A37F;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 18px;
+}
+
+/* Markdown spacing */
+
+.content p {
+    margin: 0 0 12px;
+}
+
+.content p:last-child {
+    margin-bottom: 0;
+}
+
+.content ul,
+.content ol {
+    padding-left: 24px;
+    margin: 12px 0;
+}
+
+.content li {
+    margin: 6px 0;
+}
+
+/* Message actions */
+
+.message-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.message:hover .message-actions {
+    opacity: 1;
+}
+
+.message-actions button {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all .2s;
+}
+
+.message-actions button:hover {
+    background: #343541;
+    color: white;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
